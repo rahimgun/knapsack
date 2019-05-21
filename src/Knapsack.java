@@ -13,6 +13,7 @@ import java.io.IOException;
 
 public class Knapsack {
 	public static void knapsack(int knapsack[][], int items[][],int memo[][]) {
+		
 		int row = knapsack.length;
 		int column = knapsack[0].length;
 		int knapsackCapacity = column - 1;
@@ -21,6 +22,7 @@ public class Knapsack {
 				knapsack[i][j] = F(items , knapsack , i, j,memo);
 			}
 		}
+		
 	}
 	public static int F(int[][] items, int[][] knapsack, int i, int knapsackCapacity,int memo[][]) {
 		int result;
@@ -55,7 +57,7 @@ public class Knapsack {
 		
 		int numberOfItems = 0;
 		int knapsackCapacity = 0;
-		File file = new File("data/sample1a.txt");
+		File file = new File("data/sample1d.txt");
 		Scanner scan = new Scanner(file);
 		while(scan.hasNext()) {
 			numberOfItems = scan.nextInt();
