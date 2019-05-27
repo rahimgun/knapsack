@@ -57,7 +57,7 @@ public class Knapsack {
 		
 		int numberOfItems = 0;
 		int knapsackCapacity = 0;
-		File file = new File("data/sample1d.txt");
+		File file = new File("data/knapsack_big.txt");
 		Scanner scan = new Scanner(file);
 		while(scan.hasNext()) {
 			numberOfItems = scan.nextInt();
@@ -74,7 +74,8 @@ public class Knapsack {
 			i++;
 		}
 		scan.close();
-		int knapsack[][] = new int[numberOfItems + 1][knapsackCapacity + 1];
+		//BigInteger knasack =  new 
+	    int knapsack[][] = new int[numberOfItems + 1][knapsackCapacity + 1];
 		int memo[][] = new int[numberOfItems + 1][knapsackCapacity + 1];
 		for(int i2 = 0;i2<memo.length;i2++ ){
 			for(int i3 = 0;i3<memo[0].length;i3++){
